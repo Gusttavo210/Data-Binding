@@ -12,8 +12,8 @@ import { Component } from "@angular/core";
 })
 export class FotoComponent{
     titulo = "Minhas Fotos";
-
-
+    nameButton ="Fotos Pares";
+    control = true;
 
   //Criar um array de objetos para as fotos
 
@@ -32,11 +32,13 @@ export class FotoComponent{
     {img: "https://images.justwatch.com/poster/190385337/s592/ruroni-kenshin-meiji-kenkaku-romantan", titulo: "Samurai X"}
 
   ];
-  clicar(){
-    if(this.titulo == "Minhas Fotos"){
-      this.titulo = "Minhas Imagens";
+  mudar(){
+
+    this.control = !this.control;
+    if(this.nameButton == "Todas Imagens"){
+      this.nameButton = "Fotos Pares"
     }else{
-      this.titulo = "Minhas Fotos";
-    }    
+      this.nameButton ="Todas Imagens";
+    }
   }
 }
