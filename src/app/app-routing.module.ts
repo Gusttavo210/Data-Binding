@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FormularioComponent } from './formulario/formulario.component';
-import { FotoComponent } from './foto/foto.component';
-import { InicioComponent } from './inicio/inicio.component';
+import { FormularioComponent } from './fotografia/formulario/formulario.component';
+import { FotoComponent } from './fotografia/foto/foto.component';
+import { InicioComponent } from './fotografia/inicio/inicio.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
