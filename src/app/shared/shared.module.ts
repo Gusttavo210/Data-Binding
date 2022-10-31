@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 
 import { HeaderComponent } from "./header/header.component";
 
@@ -11,7 +11,7 @@ import { HeaderComponent } from "./header/header.component";
         HeaderComponent
     ],
     imports:[
-        BrowserModule
+        CommonModule
     
         ],
         exports:[
