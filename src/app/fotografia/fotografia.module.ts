@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { FormularioComponent } from "./formulario/formulario.component";
@@ -13,8 +14,8 @@ import { InicioComponent } from "./inicio/inicio.component";
         InicioComponent
     ],
     imports:[
-    BrowserModule
-
+    BrowserModule,
+    FormsModule
     ],
 
     exports: [
