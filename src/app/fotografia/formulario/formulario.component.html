@@ -6,18 +6,18 @@
     <div class="form-group mt-3">
 
         <label for="">Informe o endereço da Imagem: </label>
-        <input class="form-control" type="text" placeholder="http://img.com" name="img" ngModel>
+        <input class="form-control" type="text" placeholder="http://img.com" name="img" ngModel required>
 
     </div>
 
     <div class="form-group mt-3">
 
         <label for="">Informe o titulo da Imagem: </label>
-        <input class="form-control" type="text" placeholder="Informe o titulo" name="titulo" ngModel>
+        <input class="form-control" type="text" placeholder="Informe o titulo" name="titulo" ngModel required>
 
     </div>
 
-    <button class="btn btn-primary mt-3"  type="submit">{{ nameButton }}</button>
+    <button class="btn btn-primary mt-3"  type="submit" [disabled]="form.invalid">{{ nameButton }}</button>
 </form>
 </div>
 
