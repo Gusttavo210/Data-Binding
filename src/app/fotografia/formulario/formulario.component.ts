@@ -24,7 +24,7 @@ export class FormularioComponent implements OnInit {
   }
 
   cadastro(){
-    console.log(this.formulario);
+    console.log(this.formulario.value);
   }
 
    /* cadastrar(bastao:any){
