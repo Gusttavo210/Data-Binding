@@ -35,8 +35,8 @@ imagens: Fotos[] = [
 
   ];
 
-constructor(private joao: HttpClient){
-  joao.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixa => this.imagens = caixa)
+constructor(private http: HttpClient){
+  http.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixa => this.imagens = caixa)
 }
 
 
@@ -49,4 +49,9 @@ constructor(private joao: HttpClient){
       this.nameButton ="Todas Imagens";
     }
   }
+
+  deletar(id: number){
+    this.http.delete('http://localhost:3000/fotos/' + id).subscribe();
+  }
+
 }
