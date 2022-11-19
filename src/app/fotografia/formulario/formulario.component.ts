@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DatabaseService } from 'src/app/service/database.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class FormularioComponent implements OnInit {
 
   constructor(
     private formbuilder: FormBuilder,
-    private http: HttpClient
+    private database: DatabaseService
     ) {}
 
   ngOnInit(): void {
@@ -35,7 +36,7 @@ export class FormularioComponent implements OnInit {
   }
 
   cadastro(){
-    this.http.post('http://localhost:3000/fotos/', JSON.stringify(this.formulario.value), this.httpOptions).subscribe();
+    this.database.postFoto(this.formulario.value);
   }
 
    /* cadastrar(bastao:any){

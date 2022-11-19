@@ -5,6 +5,7 @@
 import { style } from "@angular/animations";
 import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
+import { DatabaseService } from "src/app/service/database.service";
 import { Fotos } from "./foto";
 
 @Component({
@@ -35,10 +36,11 @@ imagens: Fotos[] = [
 
   ];
 
-constructor(private http: HttpClient){
-  http.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixa => this.imagens = caixa)
-}
+constructor(private database: DatabaseService){}
 
+  ngOnInit(){
+    this.database.getFoto().subscribe(caixa => this.imagens = caixa);
+  }
 
   mudar(){
 
@@ -51,7 +53,7 @@ constructor(private http: HttpClient){
   }
 
   deletar(id: number){
-    this.http.delete('http://localhost:3000/fotos/' + id).subscribe();
+   this.database.delFoto(id);
   }
 
 }
