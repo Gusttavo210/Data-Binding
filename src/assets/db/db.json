@@ -35,5 +35,16 @@
             "img": "https://images.justwatch.com/poster/190385337/s592/ruroni-kenshin-meiji-kenkaku-romantan", 
             "titulo": "Samurai X"
         }
+    ],
+    
+    "users" : [
+        {
+            "id":1,
+            "name":"Gusttavo Brandão",
+            "email":"gbrandao691@gmail.com",
+            "password":"Risco3384",
+            "type":"student"
+        }
     ]
+
 }

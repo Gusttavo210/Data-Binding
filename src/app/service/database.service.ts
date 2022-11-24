@@ -8,7 +8,6 @@ import { Fotos } from '../fotografia/foto/foto';
 export class DatabaseService {
 
   readonly API = 'http://localhost:3000/fotos';
-
   httpOptions = {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
   };
